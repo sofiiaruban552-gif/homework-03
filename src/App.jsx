@@ -1,7 +1,7 @@
 import './App.css'
 import Wrapper from './components/shared/Wrapper'
 import ToDoList from './components/toDoList/TaskList'
-import Users from './components/users/Users'
+import FetchUsers from './components/fetchUsers/FetchUsers'
 import GithubSearch from './components/githubSearch/GithubSearch'
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Wrapper>
       <ToDoList />
-      <Users />
+      <FetchUsers />
       <GithubSearch />
     </Wrapper>
   )
