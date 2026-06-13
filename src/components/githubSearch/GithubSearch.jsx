@@ -1,10 +1,8 @@
 
-import React from 'react';
-
 const GithubSearch = () => {
  return (
   <div>
-   
+   List
   </div>
  );
 }
