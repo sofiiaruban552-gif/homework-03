@@ -1,6 +1,7 @@
+
 import React from 'react';
 
-const Loader = () => {
+const GithubSearch = () => {
  return (
   <div>
    
@@ -8,4 +9,4 @@ const Loader = () => {
  );
 }
 
-export default Loader;
+export default GithubSearch;

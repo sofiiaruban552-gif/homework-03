@@ -1,6 +1,9 @@
+
+
+
 import React from 'react';
 
-const Loader = () => {
+const ToDoList = () => {
  return (
   <div>
    
@@ -8,4 +11,4 @@ const Loader = () => {
  );
 }
 
-export default Loader;
+export default ToDoList;
