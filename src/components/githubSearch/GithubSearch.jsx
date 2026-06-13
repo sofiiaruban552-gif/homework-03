@@ -1,9 +1,10 @@
+import SectionCard from "../shared/SectionCard";
 
 const GithubSearch = () => {
  return (
-  <div>
-   List
-  </div>
+  <SectionCard>
+ 
+  </SectionCard>
  );
 }
 

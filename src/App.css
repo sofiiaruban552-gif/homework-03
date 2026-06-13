@@ -79,6 +79,51 @@ body {
  color: var(--text-secondary);
 }
 
+.button {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+
+ padding: 12px 20px;
+
+ border: none;
+ border-radius: var(--radius-sm);
+
+ background: var(--primary);
+ color: var(--white);
+
+ font-size: 1rem;
+ font-weight: 600;
+ font-family: inherit;
+
+ cursor: pointer;
+ transition: all 0.2s ease;
+
+ box-shadow: var(--shadow-sm);
+}
+
+.button:hover:not(:disabled) {
+ opacity: 0.95;
+ transform: translateY(-1px);
+ box-shadow: var(--shadow-md);
+}
+
+.button:active:not(:disabled) {
+ transform: translateY(0);
+}
+
+.button:focus-visible {
+ outline: 2px solid var(--primary-light);
+ outline-offset: 2px;
+}
+
+.button:disabled {
+ background: var(--border);
+ color: var(--text-muted);
+ cursor: not-allowed;
+ box-shadow: none;
+}
+
 .users-grid {
  width: 100%;
 

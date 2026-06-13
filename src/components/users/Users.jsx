@@ -1,9 +1,10 @@
+import SectionCard from "../shared/SectionCard";
 
 const Users = () => {
  return (
-  <div>
-   list
-  </div>
+  <SectionCard>
+ 
+  </SectionCard>
  );
 }
 

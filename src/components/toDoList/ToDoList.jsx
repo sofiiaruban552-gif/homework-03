@@ -1,9 +1,10 @@
+import SectionCard from "../shared/SectionCard";
 
 const ToDoList = () => {
  return (
-  <div>
-   list
-  </div>
+  <SectionCard>
+ 
+  </SectionCard>
  );
 }
 
