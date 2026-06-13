@@ -19,3 +19,7 @@ export const BUTTON_LABELS = {
  ADD: "Add",
  LOAD_MORE: "Load More Users"
 }
+
+export const INPUT_PLACEHOLDERS = {
+  NEW_TASK: "Enter task..."
+}
