@@ -2,7 +2,7 @@ import { TASK_FILTERS } from "../../constants/text";
 import Button from "../shared/Button";
 import clsx from "clsx";
 
-const TaskFilter = ({ activeFilter, onChange }) => {
+const TaskFilter = ({ activeFilter, onChange}) => {
   return (
     <div className="task-filter">
       {TASK_FILTERS.map((filter) => {

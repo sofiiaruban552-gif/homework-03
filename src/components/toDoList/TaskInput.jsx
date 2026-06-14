@@ -2,7 +2,7 @@ import Input from "../shared/Input";
 import { INPUT_PLACEHOLDERS, BUTTON_LABELS } from "../../constants/text";
 import Button from "../shared/Button";
 
-const TaskInput = ({ value, onChange, onAdd }) => {
+const TaskInput = ({ value, onChange, onAdd, disabled}) => {
   return (
     <div className="task-input">
       <Input
@@ -11,7 +11,7 @@ const TaskInput = ({ value, onChange, onAdd }) => {
         onChange={onChange}
       />
 
-      <Button onClick={onAdd} label={BUTTON_LABELS.ADD} />
+      <Button onClick={onAdd} label={BUTTON_LABELS.ADD} disabled={disabled} />
     </div>
   );
 };

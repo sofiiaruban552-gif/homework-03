@@ -4,7 +4,7 @@ import ButtonIcon from "../shared/ButtonIcon";
 
 const TaskItem = ({ task, onToggle, onDelete }) => {
   const labelClassName = clsx("task-item__label", {
-    "task-item__label--completed": task.completed,
+    "task-item__label--done": task.done,
   });
 
   return (
@@ -12,12 +12,12 @@ const TaskItem = ({ task, onToggle, onDelete }) => {
       <input
         className="task-item__checkbox"
         type="checkbox"
-        id={`task-${task.id}`}
+        id={task.id}
         checked={task.completed}
         onChange={() => onToggle(task.id)}
       />
 
-      <label htmlFor={`task-${task.id}`} className={labelClassName}>
+      <label htmlFor={task.id} className={labelClassName}>
         {task.text}
       </label>
 

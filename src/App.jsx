@@ -6,18 +6,50 @@ import FetchUsers from "./components/fetchUsers/FetchUsers";
 import GithubSearch from "./components/githubSearch/GithubSearch";
 
 const App = () => {
+  const [todos, setTodos] = useState([]);
   const [value, setValue] = useState("");
+  const [filter, setFilter] = useState("all");
+
+  const isAddButtonDisabled = !value.trim();
 
   const handleAdd = () => {
     if (!value.trim()) return;
 
-    console.log("Task added:", value);
+    const newTask = {
+      id: Date.now(),
+      text: value,
+      done: false,
+    };
+
+    setTodos((prev) => [...prev, newTask]);
     setValue("");
+  };
+
+  const handleToggle = (id) => {
+    setTodos((prev) =>
+      prev.map((task) =>
+        task.id === id ? { ...task, done: !task.done } : task,
+      ),
+    );
+  };
+
+  const handleDelete = (id) => {
+    setTodos((prev) => prev.filter((task) => task.id !== id));
   };
 
   return (
     <Wrapper>
-      <ToDoList value={value} setValue={setValue} onAdd={handleAdd} />
+      <ToDoList
+        value={value}
+        setValue={setValue}
+        onAdd={handleAdd}
+        todos={todos}
+        filter={filter}
+        setFilter={setFilter}
+        disabled={isAddButtonDisabled}
+        handleToggle={handleToggle}
+        handleDelete={handleDelete}
+      />
       <FetchUsers />
       <GithubSearch />
     </Wrapper>

@@ -189,6 +189,11 @@ ul {
  flex: 1;
 }
 
+.task-item__label--done {
+ text-decoration: line-through;
+ color: var(--text-muted);
+}
+
 .button-icon {
  cursor: pointer;
 }
