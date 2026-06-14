@@ -10,10 +10,9 @@ const TaskItem = ({ task, onToggle, onDelete }) => {
   return (
     <li className="task-item">
       <input
-        className="task-item__checkbox"
         type="checkbox"
         id={task.id}
-        checked={task.completed}
+        checked={task.done}
         onChange={() => onToggle(task.id)}
       />
 

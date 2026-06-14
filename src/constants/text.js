@@ -31,5 +31,5 @@ export const INPUT_PLACEHOLDERS = {
 export const TASK_FILTERS = [
   { value: "all", label: "All" },
   { value: "active", label: "Active" },
-  { value: "completed", label: "Done" },
+  { value: "done", label: "Done" },
 ];

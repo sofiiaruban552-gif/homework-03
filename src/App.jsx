@@ -11,6 +11,7 @@ const App = () => {
   const [filter, setFilter] = useState("all");
 
   const isAddButtonDisabled = !value.trim();
+  const isFilterButtonsDisabled = todos.length === 0;
 
   const handleAdd = () => {
     if (!value.trim()) return;
@@ -36,6 +37,16 @@ const App = () => {
   const handleDelete = (id) => {
     setTodos((prev) => prev.filter((task) => task.id !== id));
   };
+  const filteredTodos = todos.filter((task) => {
+    switch (filter) {
+      case "active":
+        return !task.done;
+      case "done":
+        return task.done;
+      default:
+        return true;
+    }
+  });
 
   return (
     <Wrapper>
@@ -43,10 +54,11 @@ const App = () => {
         value={value}
         setValue={setValue}
         onAdd={handleAdd}
-        todos={todos}
+        todos={filteredTodos}
         filter={filter}
         setFilter={setFilter}
-        disabled={isAddButtonDisabled}
+        isFilterButtonsDisabled={isFilterButtonsDisabled}
+        isAddButtonDisabled={isAddButtonDisabled}
         handleToggle={handleToggle}
         handleDelete={handleDelete}
       />

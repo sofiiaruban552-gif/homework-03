@@ -12,7 +12,8 @@ const ToDoList = ({
   todos,
   filter,
   setFilter,
-  disabled,
+  isAddButtonDisabled,
+  isFilterButtonsDisabled,
   handleToggle,
   handleDelete,
 }) => {
@@ -24,9 +25,13 @@ const ToDoList = ({
         value={value}
         onChange={setValue}
         onAdd={onAdd}
-        disabled={disabled}
+        disabled={isAddButtonDisabled}
       />
-      <TaskFilter activeFilter={filter} onChange={setFilter} />
+      <TaskFilter
+        activeFilter={filter}
+        onChange={setFilter}
+        disabled={isFilterButtonsDisabled}
+      />
       <TaskList
         todos={todos}
         handleToggle={handleToggle}

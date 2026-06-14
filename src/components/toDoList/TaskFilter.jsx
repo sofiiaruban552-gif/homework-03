@@ -2,7 +2,8 @@ import { TASK_FILTERS } from "../../constants/text";
 import Button from "../shared/Button";
 import clsx from "clsx";
 
-const TaskFilter = ({ activeFilter, onChange}) => {
+const TaskFilter = ({ activeFilter, onChange, disabled }) => {
+  console.log(activeFilter);
   return (
     <div className="task-filter">
       {TASK_FILTERS.map((filter) => {
@@ -18,6 +19,7 @@ const TaskFilter = ({ activeFilter, onChange}) => {
             label={filter.label}
             onClick={clickHandler}
             className={buttonClass}
+            disabled={disabled}
           />
         );
       })}

@@ -171,6 +171,16 @@ body {
  justify-content: center;
 }
 
+.button-filter {
+ background: var(--white);
+ color: var(--text-secondary);
+}
+
+.button-filter--active {
+ background: var(--primary-light);
+ color: var(--primary);
+}
+
 ul {
  list-style: none;
  padding: 0;
