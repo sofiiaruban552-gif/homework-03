@@ -48,6 +48,8 @@ const App = () => {
     }
   });
 
+  const activeTasksCount = todos.filter((task) => !task.done).length;
+
   return (
     <Wrapper>
       <ToDoList
@@ -61,6 +63,7 @@ const App = () => {
         isAddButtonDisabled={isAddButtonDisabled}
         handleToggle={handleToggle}
         handleDelete={handleDelete}
+        activeTasksCount={activeTasksCount}
       />
       <FetchUsers />
       <GithubSearch />

@@ -3,7 +3,8 @@ export const TASK_HEADINGS = {
     title: "To-Do List",
     subtitle: "Classic task manager app",
     labels: {
-      activeTasks: "Active Tasks Left",
+      activeTasks: "Active Tasks Left:",
+      noActiveTasks: "No active tasks",
       noTasks: "No tasks yet",
     },
   },

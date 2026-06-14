@@ -16,6 +16,7 @@ const ToDoList = ({
   isFilterButtonsDisabled,
   handleToggle,
   handleDelete,
+  activeTasksCount
 }) => {
   return (
     <SectionCard>
@@ -37,7 +38,7 @@ const ToDoList = ({
         handleToggle={handleToggle}
         handleDelete={handleDelete}
       />
-      <ActiveTasksCounter />
+      <ActiveTasksCounter activeTasksCount={activeTasksCount} />
     </SectionCard>
   );
 };
