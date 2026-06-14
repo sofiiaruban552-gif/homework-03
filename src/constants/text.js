@@ -16,7 +16,7 @@ export const TASK_HEADINGS = {
 };
 
 export const BUTTON_LABELS = {
- ADD: "Add",
+ ADD: "Add New Task",
  LOAD_MORE: "Load More Users"
 }
 

@@ -1,5 +1,6 @@
 import Input from "../shared/Input";
 import { INPUT_PLACEHOLDERS, BUTTON_LABELS } from "../../constants/text";
+import Button from "../shared/Button";
 
 const TaskInput = ({ value, onChange, onAdd }) => {
   return (
@@ -10,7 +11,7 @@ const TaskInput = ({ value, onChange, onAdd }) => {
         onChange={onChange}
       />
 
-      <button onClick={onAdd}>{BUTTON_LABELS.ADD}</button>
+      <Button onClick={onAdd} label={BUTTON_LABELS.ADD} />
     </div>
   );
 };
