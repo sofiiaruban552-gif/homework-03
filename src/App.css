@@ -171,6 +171,28 @@ body {
  justify-content: center;
 }
 
+ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+.task-item {
+ display: flex;
+ align-items: center;
+ gap: var(--gap-sm);
+ padding: 16px 16px 16px 0;
+ border-bottom: 1px solid var(--border);
+}
+
+.task-item label {
+ flex: 1;
+}
+
+.button-icon {
+ cursor: pointer;
+}
+
 .users-grid {
  width: 100%;
 

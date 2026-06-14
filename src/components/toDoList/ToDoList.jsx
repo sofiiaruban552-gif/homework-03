@@ -3,6 +3,7 @@ import { TASK_HEADINGS } from "../../constants/text";
 import TaskInput from "./TaskInput";
 import TaskFilter from "./TaskFilter";
 import TaskList from "./TaskList";
+import ActiveTasksCounter from "./ActiveTasksCounter";
 
 const ToDoList = ({ value, setValue, onAdd }) => {
   return (
@@ -12,6 +13,7 @@ const ToDoList = ({ value, setValue, onAdd }) => {
       <TaskInput value={value} onChange={setValue} onAdd={onAdd} />
       <TaskFilter />
       <TaskList />
+      <ActiveTasksCounter />
     </SectionCard>
   );
 };

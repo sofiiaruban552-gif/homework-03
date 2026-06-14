@@ -2,6 +2,10 @@ export const TASK_HEADINGS = {
   TODO_LIST: {
     title: "To-Do List",
     subtitle: "Classic task manager app",
+    labels: {
+      activeTasks: "Active Tasks Left",
+      noTasks: "No tasks yet",
+    },
   },
 
   USE_EFFECT: {
@@ -16,14 +20,13 @@ export const TASK_HEADINGS = {
 };
 
 export const BUTTON_LABELS = {
- ADD: "Add New Task",
- LOAD_MORE: "Load More Users"
-}
+  ADD: "Add New Task",
+  LOAD_MORE: "Load More Users",
+};
 
 export const INPUT_PLACEHOLDERS = {
-  NEW_TASK: "Enter task..."
-}
-
+  NEW_TASK: "Enter task...",
+};
 
 export const TASK_FILTERS = [
   { value: "all", label: "All" },
