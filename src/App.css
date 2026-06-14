@@ -63,6 +63,9 @@ body {
  border-radius: var(--radius-sm);
  padding: 20px;
  box-shadow: var(--shadow-sm);
+ display: flex;
+ flex-direction: column;
+ gap: var(--gap-md);
 }
 
 .section-title {
@@ -159,6 +162,13 @@ body {
  color: var(--text-muted);
  cursor: not-allowed;
  box-shadow: none;
+}
+
+.task-filter {
+ display: flex;
+ gap: var(--gap-md);
+ align-items: center;
+ justify-content: center;
 }
 
 .users-grid {

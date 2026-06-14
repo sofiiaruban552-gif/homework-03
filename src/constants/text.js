@@ -23,3 +23,10 @@ export const BUTTON_LABELS = {
 export const INPUT_PLACEHOLDERS = {
   NEW_TASK: "Enter task..."
 }
+
+
+export const TASK_FILTERS = [
+  { value: "all", label: "All" },
+  { value: "active", label: "Active" },
+  { value: "completed", label: "Done" },
+];
