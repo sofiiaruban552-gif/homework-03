@@ -34,3 +34,20 @@ export const TASK_FILTERS = [
   { value: "active", label: "Active" },
   { value: "done", label: "Done" },
 ];
+
+export const STATUS_TEXT = {
+  loading: "Loading...",
+  error: "Failed to fetch data",
+
+  users: {
+    loading: "Loading users...",
+    error: "Failed to fetch users",
+  },
+
+  github: {
+    prompt: "Start typing to search GitHub users",
+    loading: "Searching...",
+    empty: "No users found",
+    error: "Failed to search GitHub users",
+  },
+};

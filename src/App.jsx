@@ -4,11 +4,18 @@ import Wrapper from "./components/shared/Wrapper";
 import ToDoList from "./components/toDoList/ToDoList";
 import FetchUsers from "./components/fetchUsers/FetchUsers";
 import GithubSearch from "./components/githubSearch/GithubSearch";
+import useFetch from "./hooks/useFetch";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [value, setValue] = useState("");
   const [filter, setFilter] = useState("all");
+
+  const {
+    data: users,
+    loading,
+    error,
+  } = useFetch("https://jsonplaceholder.typicode.com/users");
 
   const isAddButtonDisabled = !value.trim();
   const isFilterButtonsDisabled = todos.length === 0;
@@ -65,7 +72,7 @@ const App = () => {
         handleDelete={handleDelete}
         activeTasksCount={activeTasksCount}
       />
-      <FetchUsers />
+      <FetchUsers users={users} loading={loading} error={error} />
       <GithubSearch />
     </Wrapper>
   );
