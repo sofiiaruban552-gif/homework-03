@@ -208,6 +208,22 @@ ul {
  cursor: pointer;
 }
 
+.spinner {
+ width: 24px;
+ height: 24px;
+ animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+ from {
+  transform: rotate(0deg);
+ }
+
+ to {
+  transform: rotate(360deg);
+ }
+}
+
 .users-grid {
  width: 100%;
 
