@@ -16,12 +16,12 @@ const ToDoList = ({
   isFilterButtonsDisabled,
   handleToggle,
   handleDelete,
-  activeTasksCount
+  activeTasksCount,
 }) => {
   return (
     <SectionCard>
-      <h1 className="section-title">{TASK_HEADINGS.TODO_LIST.title}</h1>
-      <h2 className="section-subtitle">{TASK_HEADINGS.TODO_LIST.subtitle}</h2>
+      <h2 className="section-title">{TASK_HEADINGS.TODO_LIST.title}</h2>
+      <h3 className="section-subtitle">{TASK_HEADINGS.TODO_LIST.subtitle}</h3>
       <TaskInput
         value={value}
         onChange={setValue}

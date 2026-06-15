@@ -9,7 +9,7 @@ export const TASK_HEADINGS = {
     },
   },
 
-  USE_EFFECT: {
+  FETCH_USERS: {
     title: "Data Loading with useEffect + fetch",
     subtitle: "Fetching users from API",
   },
