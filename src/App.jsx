@@ -5,17 +5,14 @@ import ToDoList from "./components/toDoList/ToDoList";
 import FetchUsers from "./components/fetchUsers/FetchUsers";
 import GithubSearch from "./components/githubSearch/GithubSearch";
 import useFetch from "./hooks/useFetch";
+import { API_URLS } from "./constants/api";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [value, setValue] = useState("");
   const [filter, setFilter] = useState("all");
 
-  const {
-    data: users,
-    loading,
-    error,
-  } = useFetch("https://jsonplaceholder.typicode.com/users");
+  const { data: users, loading, error } = useFetch(API_URLS.USERS);
 
   const isAddButtonDisabled = !value.trim();
   const isFilterButtonsDisabled = todos.length === 0;
