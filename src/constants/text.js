@@ -27,6 +27,7 @@ export const BUTTON_LABELS = {
 
 export const INPUT_PLACEHOLDERS = {
   NEW_TASK: "Enter task...",
+  GITHUB_SEARCH: "Enter nickname",
 };
 
 export const TASK_FILTERS = [

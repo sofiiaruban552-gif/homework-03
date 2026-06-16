@@ -44,7 +44,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1400px;
 
   display: flex;
   flex-direction: column;
@@ -267,4 +267,56 @@ ul {
 
 .user-card__city {
   margin-bottom: 0;
+}
+
+.github-user-list {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  padding: var(--gap-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.user-item:last-child {
+  border-bottom: none;
+}
+
+.user-item__avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.user-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-item__name {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.user-item__link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+.user-item__link:hover {
+  text-decoration: underline;
 }

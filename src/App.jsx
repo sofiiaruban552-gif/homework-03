@@ -11,8 +11,15 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   const [value, setValue] = useState("");
   const [filter, setFilter] = useState("all");
+  const [query, setQuery] = useState("");
 
   const { data: users, loading, error } = useFetch(API_URLS.USERS);
+  
+  const {
+    data: searchedData,
+    loading: githubLoading,
+    error: githubError,
+  } = useFetch(`${API_URLS.GITHUB_SEARCH}${query.trim()}`);
 
   const isAddButtonDisabled = !value.trim();
   const isFilterButtonsDisabled = todos.length === 0;
@@ -70,7 +77,13 @@ const App = () => {
         activeTasksCount={activeTasksCount}
       />
       <FetchUsers users={users} loading={loading} error={error} />
-      <GithubSearch />
+      <GithubSearch
+        query={query}
+        setQuery={setQuery}
+        searchedData={searchedData.items}
+        loading={githubLoading}
+        error={githubError}
+      />
     </Wrapper>
   );
 };
