@@ -30,9 +30,12 @@
   --radius-lg: 16px;
 
   /* Spacing */
-  --gap-sm: 8px;
-  --gap-md: 16px;
-  --gap-lg: 24px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
 }
 
 body {
@@ -49,10 +52,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: var(--space-6);
 
   margin: 0 auto;
-  padding: 20px;
+  padding: var(--space-5);
 }
 
 .card {
@@ -61,11 +64,11 @@ body {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  padding: 20px;
+  padding: var(--space-5);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--space-4);
 }
 
 .section-title {
@@ -76,22 +79,22 @@ body {
 }
 
 .section-subtitle {
-  margin: 0 0 4px;
+  margin: 0 0 var(--space-1);
   font-size: 1.125rem;
   color: var(--text-secondary);
 }
 
 .task-input {
   display: flex;
-  gap: var(--gap-md);
+  gap: var(--space-4);
 }
 
 .input {
   width: 100%;
-  padding: 12px 16px;
+  padding: var(--space-3) var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--text);
   background-color: var(--white);
   outline: none;
@@ -124,7 +127,7 @@ body {
   justify-content: center;
   white-space: nowrap;
 
-  padding: 12px 20px;
+  padding: var(--space-3) var(--space-5);
 
   border: none;
   border-radius: var(--radius-sm);
@@ -166,7 +169,7 @@ body {
 
 .task-filter {
   display: flex;
-  gap: var(--gap-md);
+  gap: var(--space-4);
   align-items: center;
   justify-content: center;
 }
@@ -190,8 +193,8 @@ ul {
 .task-item {
   display: flex;
   align-items: center;
-  gap: var(--gap-sm);
-  padding: 16px 16px 16px 0;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) var(--space-4) 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -209,8 +212,8 @@ ul {
 }
 
 .spinner {
-  width: 24px;
-  height: 24px;
+  width: var(--space-6);
+  height: var(--space-6);
   animation: spin 1s linear infinite;
 }
 
@@ -227,11 +230,11 @@ ul {
 .users-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-sm);
+  gap: var(--space-3);
 }
 
 .user-card {
-  padding: 16px;
+  padding: var(--space-4);
   background-color: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -248,10 +251,10 @@ ul {
 }
 
 .user-card__name {
-  margin-top: 0 0 var(--gap-md);
+  margin: 0 0 var(--space-4);
 
   color: var(--text);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
@@ -262,7 +265,7 @@ ul {
 }
 
 .user-card__email {
-  margin-bottom: var(--gap-sm);
+  margin-bottom: var(--space-3);
 }
 
 .user-card__city {
@@ -280,8 +283,8 @@ ul {
 .user-item {
   display: flex;
   align-items: center;
-  gap: var(--gap-md);
-  padding: var(--gap-lg);
+  gap: var(--space-4);
+  padding: var(--space-4);
   border-bottom: 1px solid var(--border);
 }
 
@@ -290,8 +293,8 @@ ul {
 }
 
 .user-item__avatar {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -300,7 +303,7 @@ ul {
 .user-item__content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--gap-xs);
 }
 
 .user-item__name {
@@ -319,4 +322,10 @@ ul {
 
 .user-item__link:hover {
   text-decoration: underline;
+}
+
+.message {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
 }

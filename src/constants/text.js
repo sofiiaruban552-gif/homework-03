@@ -3,8 +3,8 @@ export const TASK_HEADINGS = {
     title: "To-Do List",
     subtitle: "Classic task manager app",
     labels: {
-      activeTasks: "Active Tasks Left:",
-      noActiveTasks: "No active tasks",
+      tasks: "Tasks:",
+      noActiveTasks: "No tasks",
       noTasks: "No tasks yet",
     },
   },
@@ -19,22 +19,20 @@ export const TASK_HEADINGS = {
     subtitle: "Advanced search feature",
   },
 };
+export const TASK_FILTERS = [
+  { value: "all", label: "All" },
+  { value: "active", label: "Active" },
+  { value: "done", label: "Done" },
+];
 
 export const BUTTON_LABELS = {
   ADD: "Add New Task",
-  LOAD_MORE: "Load More Users",
 };
 
 export const INPUT_PLACEHOLDERS = {
   NEW_TASK: "Enter task...",
   GITHUB_SEARCH: "Enter nickname",
 };
-
-export const TASK_FILTERS = [
-  { value: "all", label: "All" },
-  { value: "active", label: "Active" },
-  { value: "done", label: "Done" },
-];
 
 export const STATUS_TEXT = {
   loading: "Loading...",

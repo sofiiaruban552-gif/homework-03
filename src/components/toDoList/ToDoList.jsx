@@ -3,7 +3,7 @@ import { TASK_HEADINGS } from "../../constants/text";
 import TaskInput from "./TaskInput";
 import TaskFilter from "./TaskFilter";
 import TaskList from "./TaskList";
-import ActiveTasksCounter from "./ActiveTasksCounter";
+import TasksCounter from "./TasksCounter";
 
 const ToDoList = ({
   value,
@@ -16,7 +16,7 @@ const ToDoList = ({
   isFilterButtonsDisabled,
   handleToggle,
   handleDelete,
-  activeTasksCount,
+  tasksCount,
 }) => {
   return (
     <SectionCard>
@@ -38,7 +38,7 @@ const ToDoList = ({
         handleToggle={handleToggle}
         handleDelete={handleDelete}
       />
-      <ActiveTasksCounter activeTasksCount={activeTasksCount} />
+      <TasksCounter tasksCount={tasksCount} />
     </SectionCard>
   );
 };

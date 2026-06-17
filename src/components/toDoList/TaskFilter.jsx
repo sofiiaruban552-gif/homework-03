@@ -3,22 +3,18 @@ import Button from "../shared/Button";
 import clsx from "clsx";
 
 const TaskFilter = ({ activeFilter, onChange, disabled }) => {
-  console.log(activeFilter);
+  const getButtonClass = (isActive) =>
+    clsx("button-filter", isActive && "button-filter--active");
+
   return (
     <div className="task-filter">
-      {TASK_FILTERS.map((filter) => {
-        const buttonClass = clsx("button-filter", {
-          "button-filter--active": activeFilter === filter.value,
-        });
-
-        const clickHandler = () => onChange(filter.value);
-
+      {TASK_FILTERS.map(({ value, label }) => {
         return (
           <Button
-            key={filter.value}
-            label={filter.label}
-            onClick={clickHandler}
-            className={buttonClass}
+            key={value}
+            label={label}
+            onClick={() => onChange(value)}
+            className={getButtonClass(activeFilter === value)}
             disabled={disabled}
           />
         );
