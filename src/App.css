@@ -69,14 +69,14 @@ body {
 }
 
 .section-title {
-  margin: 0 0 8px;
+  margin: 0;
   font-size: 2rem;
   font-weight: 700;
   color: var(--text);
 }
 
 .section-subtitle {
-  margin: 0 0 24px;
+  margin: 0 0 4px;
   font-size: 1.125rem;
   color: var(--text-secondary);
 }

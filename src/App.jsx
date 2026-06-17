@@ -5,6 +5,7 @@ import ToDoList from "./components/toDoList/ToDoList";
 import FetchUsers from "./components/fetchUsers/FetchUsers";
 import GithubSearch from "./components/githubSearch/GithubSearch";
 import useFetch from "./hooks/useFetch";
+import useDebounce from "./hooks/useDebounce";
 import { API_URLS } from "./constants/api";
 
 const App = () => {
@@ -14,12 +15,17 @@ const App = () => {
   const [query, setQuery] = useState("");
 
   const { data: users, loading, error } = useFetch(API_URLS.USERS);
-  
+
+  const debouncedQuery = useDebounce(query);
   const {
     data: searchedData,
     loading: githubLoading,
     error: githubError,
-  } = useFetch(`${API_URLS.GITHUB_SEARCH}${query.trim()}`);
+  } = useFetch(
+    debouncedQuery.trim()
+      ? `${API_URLS.GITHUB_SEARCH}${debouncedQuery.trim()}`
+      : null,
+  );
 
   const isAddButtonDisabled = !value.trim();
   const isFilterButtonsDisabled = todos.length === 0;
