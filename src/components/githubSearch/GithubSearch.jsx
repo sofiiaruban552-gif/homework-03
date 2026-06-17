@@ -10,24 +10,30 @@ import StatusMessage from "../shared/StatusMessage";
 import LoadingSpinner from "../shared/LoadingSpinner";
 
 const GithubSearch = ({ query, setQuery, searchedData, loading, error }) => {
-  let content;
+  const renderContent = () => {
+    if (loading) {
+      return (
+        <StatusMessage>
+          <LoadingSpinner />
+          {STATUS_TEXT.github.loading}
+        </StatusMessage>
+      );
+    }
 
-  if (loading) {
-    content = (
-      <StatusMessage>
-        <LoadingSpinner />
-        {STATUS_TEXT.github.loading}
-      </StatusMessage>
-    );
-  } else if (!query?.length) {
-    content = <StatusMessage>{STATUS_TEXT.github.prompt}</StatusMessage>;
-  } else if (error) {
-    content = <StatusMessage>{STATUS_TEXT.github.error}</StatusMessage>;
-  } else if (!searchedData?.length) {
-    content = <StatusMessage>{STATUS_TEXT.github.empty}</StatusMessage>;
-  } else {
-    content = <GithubUserList users={searchedData} />;
-  }
+    if (!query?.trim()) {
+      return <StatusMessage>{STATUS_TEXT.github.prompt}</StatusMessage>;
+    }
+
+    if (error) {
+      return <StatusMessage>{STATUS_TEXT.github.error}</StatusMessage>;
+    }
+
+    if (!searchedData?.length) {
+      return <StatusMessage>{STATUS_TEXT.github.empty}</StatusMessage>;
+    }
+
+    return <GithubUserList users={searchedData} />;
+  };
 
   return (
     <SectionCard>
@@ -42,7 +48,7 @@ const GithubSearch = ({ query, setQuery, searchedData, loading, error }) => {
         placeholder={INPUT_PLACEHOLDERS.GITHUB_SEARCH}
         onChange={setQuery}
       />
-      {content}
+      {renderContent()}
     </SectionCard>
   );
 };
